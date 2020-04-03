@@ -17,14 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about', function () {
-    return "About";
-});
+Route::resource('posts', 'PostsController');
+// Route::get('/about', function () {
+//     return "About";
+// });
 
-Route::get('/contact', function () {
-    return "Contact";
-});
+// Route::get('/contact', function () {
+//     return "Contact";
+// });
 
-Route::get('/post/{id}', function ($id) {
-    return "This is post number ".$id;
-});
+// Route::get('/post/{id}', function ($id) {
+//     return "This is post number ".$id;
+// });
