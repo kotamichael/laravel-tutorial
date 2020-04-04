@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/find', function () {
+    $posts = Post::all();
+    
+    foreach($posts as $post) {
+        return $post;
+    }
 });
 
 Route::get('/contact', 'PostsController@contact');
