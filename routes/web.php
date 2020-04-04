@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/contact', 'PostsController@contact');
+
 Route::resource('posts', 'PostsController');
 // Route::get('/about', function () {
 //     return "About";
